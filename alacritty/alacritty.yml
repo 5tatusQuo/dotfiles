@@ -1,18 +1,36 @@
 font:
   normal:
-    family: FiraCode Nerd Font
+    family: JetBrainsMono Nerd Font
     style: Regular
   bold:
-    family: FiraCode Nerd Font
+    family: JetBrainsMono Nerd Font
     style: Bold
   italic:
-    family: FiraCode Nerd Font
+    family: JetBrainsMono Nerd Font
     style: Italic
   size: 12
 colors:
   primary:
-    background: '#1a1b26'
-    foreground: '#c0caf5'
+    background: '#282828'  # Gruvbox dark background
+    foreground: '#ebdbb2'  # Gruvbox light foreground
+  normal:
+    black:   '#282828'  # bg0
+    red:     '#cc241d'  # red
+    green:   '#98971a'  # green
+    yellow:  '#d79921'  # yellow
+    blue:    '#458588'  # blue
+    magenta: '#b16286'  # purple
+    cyan:    '#689d6a'  # aqua
+    white:   '#a89984'  # gray
+  bright:
+    black:   '#928374'  # gray
+    red:     '#fb4934'  # bright red
+    green:   '#b8bb26'  # bright green
+    yellow:  '#fabd2f'  # bright yellow
+    blue:    '#83a598'  # bright blue
+    magenta: '#d3869b'  # bright purple
+    cyan:    '#8ec07c'  # bright aqua
+    white:   '#ebdbb2'  # fg1
 shell:
   program: /bin/zsh
 window:

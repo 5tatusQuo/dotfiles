@@ -37,3 +37,6 @@
 
    # Tmux integration
    export ZSH_TMUX_AUTOSTART=false  # Don’t auto-start tmux (use manually)
+
+   export PATH="$PATH:/opt/nvim-linux-x86_64/bin"
+export PATH="$HOME/.local/bin:$PATH"
