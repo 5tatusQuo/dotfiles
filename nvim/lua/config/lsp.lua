@@ -1,16 +1,20 @@
-local lspconfig = require("lspconfig")
-lspconfig.clangd.setup {
-  capabilities = require("cmp_nvim_lsp").default_capabilities(),
+local lsp = require('lspconfig')
+
+-- Lua
+lsp.lua_ls.setup {
+  settings = {
+    Lua = {
+      diagnostics = {
+        globals = { 'vim' }
+      }
+    }
+  }
 }
 
--- Keybindings for LSP
-vim.api.nvim_create_autocmd("LspAttach", {
-  group = vim.api.nvim_create_augroup("UserLspConfig", {}),
-  callback = function(ev)
-    local opts = { buffer = ev.buf }
-    vim.keymap.set("n", "gd", vim.lsp.buf.definition, opts)
-    vim.keymap.set("n", "K", vim.lsp.buf.hover, opts)
-    vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action, opts)
-    vim.keymap.set("n", "<leader>rn", vim.lsp.buf.rename, opts)
-  end,
-})
+-- C++
+lsp.clangd.setup {
+  capabilities = require('cmp_nvim_lsp').default_capabilities(),
+  cmd = { "clangd", "--background-index", "--completion-style=bundled" },
+  filetypes = { "c", "cpp", "objc", "objcpp" },
+  root_dir = lsp.util.root_pattern("compile_commands.json", ".git") or vim.loop.cwd(),
+}
