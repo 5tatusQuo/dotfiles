@@ -25,7 +25,7 @@ require("lazy").setup({
   { "nvim-treesitter/nvim-treesitter", build = ":TSUpdate" },
   { "skywind3000/asyncrun.vim" }, -- C++ compilation
   { "nvim-lualine/lualine.nvim" }, -- Statusline
-  { "savq/melange-nvim" }, -- Theme
+  { "folke/tokyonight.nvim" }, -- Theme
 })
 
 -- Load configurations
@@ -38,4 +38,4 @@ require("config.asyncrun")
 require("config.keybindings")
 
 -- Theme
-vim.cmd [[colorscheme melange]]
+vim.cmd [[colorscheme tokyonight]]

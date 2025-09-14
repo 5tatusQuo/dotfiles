@@ -1,0 +1,85 @@
+[font]
+normal = { family = "JetBrainsMono Nerd Font", style = "Regular" }
+size = 12.0
+
+[colors.primary]
+background = "#2C1B18"
+foreground = "#FDF5E6"
+dim_foreground = "#E0CDA9"
+bright_foreground = "#FDF5E6"
+
+[colors.cursor]
+text = "#2C1B18"
+cursor = "#F4C430"
+
+[colors.vi_mode_cursor]
+text = "#2C1B18"
+cursor = "#E67E22"
+
+[colors.search.matches]
+foreground = "#2C1B18"
+background = "#F5DEB3"
+
+[colors.search.focused_match]
+foreground = "#2C1B18"
+background = "#F4C430"
+
+[colors.footer_bar]
+foreground = "#2C1B18"
+background = "#E0CDA9"
+
+[colors.hints.start]
+foreground = "#2C1B18"
+background = "#F4C430"
+
+[colors.hints.end]
+foreground = "#2C1B18"
+background = "#E0CDA9"
+
+[colors.selection]
+text = "#2C1B18"
+background = "#E0CDA9"
+
+[colors.normal]
+black = "#2C1B18"
+red = "#D35400"
+green = "#A04000"
+yellow = "#F4C430"
+blue = "#E67E22"
+magenta = "#F5DEB3"
+cyan = "#E0CDA9"
+white = "#FDF5E6"
+
+[colors.bright]
+black = "#5C3317"
+red = "#E67E22"
+green = "#A04000"
+yellow = "#F4C430"
+blue = "#E0CDA9"
+magenta = "#F5DEB3"
+cyan = "#E0CDA9"
+white = "#F5DEB3"
+
+[colors.dim]
+black = "#2C1B18"
+red = "#D35400"
+green = "#A04000"
+yellow = "#F4C430"
+blue = "#E67E22"
+magenta = "#E0CDA9"
+cyan = "#E0CDA9"
+white = "#E0CDA9"
+
+[[colors.indexed_colors]]
+index = 16
+color = "#E67E22"
+
+[[colors.indexed_colors]]
+index = 17
+color = "#F4C430"
+
+[terminal]
+
+[terminal.shell]
+program = "/usr/bin/zsh"
+args = ["-lc", "catnap; exec zsh -l"]

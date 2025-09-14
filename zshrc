@@ -6,7 +6,12 @@
    fi
 
    # Path to Oh My Zsh installation
-   export ZSH="$HOME/.oh-my-zsh"
+# Prefer per-user Oh My Zsh if present, else use system-wide
+if [ -r "$HOME/.oh-my-zsh/oh-my-zsh.sh" ]; then
+  export ZSH="$HOME/.oh-my-zsh"
+else
+  export ZSH="/usr/local/share/oh-my-zsh"
+fi
 
    # Theme (Powerlevel10k for a modern, customizable prompt)
    ZSH_THEME="powerlevel10k/powerlevel10k"
@@ -21,7 +26,10 @@
    )
 
    # Source Oh My Zsh (must be after instant prompt preamble)
-   source $ZSH/oh-my-zsh.sh
+# Load Oh My Zsh
+if [ -r "$ZSH/oh-my-zsh.sh" ]; then
+  source "$ZSH/oh-my-zsh.sh"
+fi
 
    # Powerlevel10k prompt customization (run `p10k configure` to tweak)
    [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
